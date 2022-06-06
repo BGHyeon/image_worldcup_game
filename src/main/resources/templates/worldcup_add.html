@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+    <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+    <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="/js/worldcup_add.js"></script>
+</head>
+<body>
+
+  <form id="worldcup-form" class="p-3" action="/world-cup-game" method="post" enctype="multipart/form-data">
+      <label for="worldcup-title" class="form-label">월드컵 Title</label>
+      <input id="worldcup-title"  name="name" class="form-control">
+      <label for="worldcup-dcs" class="form-label">월드컵 설명</label>
+      <input id="worldcup-dcs" class="form-control" name="description">
+      <input id="file-select" name="files" type="file" class="btn btn-outline-primary" value="이미지 파일 선택" accept=".png,.jpg" onchange="selectImageFile()" multiple>
+      <div class="container">
+          <div class="card col-md-3" id="original" style="display: none">
+              <img class="input-img card-img-top" src="">
+              <div class="card-body">
+              <input class="form-control img-title" type="text" placeholder="이미지 설명..." name="">
+              </div>
+          </div>
+          <div class="row" id="img-list">
+
+          </div>
+          <input type="submit" class="btn btn-outline-success" value="월드컵 만들기">
+      </div>
+  </form>
+</body>
+</html>

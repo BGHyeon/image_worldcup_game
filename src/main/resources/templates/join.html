@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sparta HangHae99 Spring</title>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+    <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+    <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="/js/join.js"></script>
+</head>
+
+<body>
+<div class="container row">
+    <div class="col-md-6" style="float: none;margin: 0 auto">
+        <div class="card p-5">
+            <form action="/member" method="post">
+                <div class="row">
+                    <label for="login-id" class="form-label">ID :</label>
+                    <input id="login-id" class="form-control" onchange="submitHidden(true)" type="text" name="loginId">
+                    <button onclick="idCheck()" type="button" class="btn btn-outline-danger">ID 중복 확인</button>
+                </div>
+                <div class="row">
+                    <label for="login-pw" class="form-label">PW :</label>
+                    <input id="login-pw" onchange="checkPw()" class="form-control" type="password" name="loginPw">
+                </div>
+                <div class="row">
+                    <label for="login-pw-confirm" class="form-label">PW확인 :</label>
+                    <input id="login-pw-confirm" onchange="checkPw()" class="form-control" type="password">
+                </div>
+                <div class="row">
+                    <label for="login-name" class="form-label">이름 :</label>
+                    <input id="login-name" class="form-control" type="text" name="name">
+                </div>
+                <div class="row">
+                    <label for="login-nickname" class="form-label">닉네임 :</label>
+                    <input id="login-nickname" class="form-control" type="text" name="nickName">
+                </div>
+                <input id="submit" style="display: none" type="submit" class="btn btn-outline-primary m-3" value="회원가입">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
